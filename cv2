@@ -1,1 +1,11 @@
 
+import cv2
+
+cap = cv2.VideoCapture('Welcometothegulag.mp4')
+
+while True:
+    success, mp4 = cap.read()
+    cv2.imshow('Result', mp4)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
