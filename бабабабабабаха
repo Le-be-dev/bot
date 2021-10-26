@@ -1,0 +1,37 @@
+#это запись файла
+#my_file = open('agagag.txt','w')
+#text = 141
+#my_file.write(str(text))
+#print(my_file.closed)
+#my_file.close()
+#print(my_file.closed)
+
+#добавляет символы в код
+# my_file = open('agagag.txt','a')
+# text = 141
+# my_file.write(str(text))
+# my_file.close()
+
+#читает символы в файле
+#my_file = open('agagag.txt','r')
+#print(my_file.read(38))
+#my_file.close()
+
+import time
+x=0
+while True:
+    x = x + 1
+    a = open('agagag.txt', 'a')
+    a.write(str(x))
+    print('какая погода на улице')
+    polz = input()
+    print('ваш ответ сохранен')
+    a.write('\n')
+    a.write(polz)
+    a.close()
+    time.sleep(1)
+
+
+
+
+
