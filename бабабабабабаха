@@ -1,4 +1,4 @@
-#это запись файла
+#запись файла
 #my_file = open('agagag.txt','w')
 #text = 141
 #my_file.write(str(text))
@@ -17,19 +17,33 @@
 #print(my_file.read(38))
 #my_file.close()
 
-import time
-x=0
-while True:
-    x = x + 1
-    a = open('agagag.txt', 'a')
-    a.write(str(x))
-    print('какая погода на улице')
-    polz = input()
-    print('ваш ответ сохранен')
-    a.write('\n')
-    a.write(polz)
-    a.close()
-    time.sleep(1)
+#парсинг
+
+a = open('agagag.txt','r')
+b = a.read()
+a.close()
+
+print(b)
+
+COD = ['']
+j=0
+for i in range(len(b)):
+    if b[i] != ' ':
+        COD[j] += b[i]
+    else:
+        j +=1
+        COD.append('')
+
+for i in range(len(COD)):
+    COD[i] = int (COD[i])
+
+
+print(COD)
+
+sum = 0
+for i in range (len(COD)):
+    sum +=COD[i]
+print(sum)
 
 
 
