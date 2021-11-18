@@ -1,0 +1,23 @@
+class tadjik:
+    def __init__(self,a,b,x,d ="NIGGER"):
+        self.a = a
+        self.b = b
+        self.x = x
+        self.d = d
+    def BULMENI_S_PIVOM(self):
+        print(self.a * self.b * self.x * 850)
+
+class kranvagen(tadjik):
+    def __init__(self, a,b,x,d,n = 2):
+        tadjik.__init__(self,a, b ,x ,d )
+        self.nomer = n
+    def emilII(self):
+        print(self.a * self.b * self.x * 850 *self.nomer)
+
+
+tatarin = tadjik(2, 1, 5)
+tatarin.BULMENI_S_PIVOM()
+
+armane = kranvagen(2, 1, 5, 3)
+print("Ширина",armane.a ,"Высота",armane.b,"Длина",armane.x,"Количество",armane.nomer,"Цвет",armane.d)
+armane.emilII()
