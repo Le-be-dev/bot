@@ -1,11 +1,23 @@
-
 import cv2
+import numpy as np
 
-cap = cv2.VideoCapture('Welcometothegulag.mp4')
+cod = cv2.imread('things-call-of-duty-modern-warfare-2019-done-right-1.jpg')
+# cod = cv2.resize(cod,(cod.shape[1]//2,cod.shape[0]//2))
+# cod = cv2.GaussianBlur(cod,(9,9),0)
+cv2.imshow('CpJPrice',cod)
+cv2.waitKey(1000)
+cod = cv2.cvtColor(cod, cv2.COLOR_BGR2GRAY)
+cv2.imshow('CpJPrice',cod)
+cv2.waitKey(1000)
+cod = cv2.Canny(cod,130,130)
+cv2.imshow('CpJPrice',cod)
+cv2.waitKey(1000)
 
-while True:
-    success, mp4 = cap.read()
-    cv2.imshow('Result', mp4)
+c = np.ones([500,500,2])
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+c = np.ones((2,2), np.uint8)
+cod = cv2.dilate(cod,c, iterations=1)
+
+cv2.imshow('CpJPrice',cod)
+cv2.waitKey(1000)
+
