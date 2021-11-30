@@ -21,3 +21,36 @@ cod = cv2.dilate(cod,c, iterations=1)
 cv2.imshow('CpJPrice',cod)
 cv2.waitKey(1000)
 
+______________________
+также для копирования
+______________________
+
+import cv2
+import numpy as np
+
+img = cv2.imread('433754_FKTsnKozph_callofduty.jpg')
+
+# b = np.zeros((1000,1000,3), np.uint8)
+# b[200:250, 200:280] = 134, 199, 40
+TEXT = input('текст мне запили')
+# COLOR = input('bgr мне запили')
+B =int(input('b мне запили'))
+G =int(input('g мне запили'))
+R =int(input('r мне запили'))
+
+cv2.putText(img,TEXT,(100,100), cv2.FONT_HERSHEY_SIMPLEX,1,(B,G,R))
+
+# cv2.rectangle(b, (10,10),(100,100),(134, 199, 40),thickness=1)
+# cv2.rectangle(b, (10,100),(100,180),(134, 199, 40),thickness=cv2.FILLED)
+# cv2.circle(b,(450,450),50,(134, 199, 40))
+# cv2.circle(b,(400,500),50,(134, 199, 40))
+# cv2.circle(b,(b.shape[1]//2,b.shape[0]//2) ,50,(134, 199, 40))
+
+
+
+
+
+cv2.imshow('CpJPrice',img)
+
+cv2.waitKey(0)
+
