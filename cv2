@@ -54,3 +54,33 @@ cv2.imshow('CpJPrice',img)
 
 cv2.waitKey(0)
 
+
+______________________
+также для копирования
+______________________
+
+
+import cv2
+import time
+cod = cv2.VideoCapture(0)
+TEXT = 'CpJPrice'
+
+a = 0
+b = 300
+
+
+while True:
+    success, img = cod.read()
+
+    cv2.putText(img, TEXT, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255))
+    img = cv2.GaussianBlur(img, (1, 1), 0)
+    img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    img = cv2.Canny(img, 110, 110)
+    a,b = a+1,b+1
+
+    cv2.rectangle(img, (a, 150), (b, 300), (255, 255, 255), thickness=1)
+    cv2.imshow('Result', img)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
