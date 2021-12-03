@@ -1,10 +1,10 @@
 class tadjik:
-    def __init__(self,a,b,x,d ="NIGGER"):
+    def __init__(self,a,b,x,d ="black"):
         self.a = a
         self.b = b
         self.x = x
         self.d = d
-    def BULMENI_S_PIVOM(self):
+    def asdf(self):
         print(self.a * self.b * self.x * 850)
 
 class kranvagen(tadjik):
@@ -16,7 +16,7 @@ class kranvagen(tadjik):
 
 
 tatarin = tadjik(2, 1, 5)
-tatarin.BULMENI_S_PIVOM()
+tatarin.asdf()
 
 armane = kranvagen(2, 1, 5, 3)
 print("Ширина",armane.a ,"Высота",armane.b,"Длина",armane.x,"Количество",armane.nomer,"Цвет",armane.d)
