@@ -104,3 +104,18 @@ cv2.drawContours(b, con, -1,(255,255,255),1)
 
 cv2.imshow('sand', b)
 cv2.waitKey(0)
+
+______________________
+также для копирования
+______________________
+import cv2
+import numpy as np
+
+img = cv2.imread('CALDA.jpg')
+
+r, g, b = cv2.split(img)
+
+img = cv2.merge([g,r,b])
+
+cv2.imshow('sand', img)
+cv2.waitKey(0)
