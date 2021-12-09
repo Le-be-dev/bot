@@ -119,3 +119,26 @@ img = cv2.merge([g,r,b])
 
 cv2.imshow('sand', img)
 cv2.waitKey(0)
+
+______________________
+также для копирования
+______________________
+
+
+import cv2
+
+img = cv2.imread('maxresdefault.jpg')
+
+
+YLIBKA_CAPITANA_PRAISA = cv2.CascadeClassifier('smile.xml')
+
+results = YLIBKA_CAPITANA_PRAISA.detectMultiScale(img, scaleFactor= 3 , minNeighbors= 26)
+print(results)
+for (x,y,w,h) in results:
+    cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),thickness=3)
+
+
+
+
+cv2.imshow('CPJPRICE', img)
+cv2.waitKey(0)
